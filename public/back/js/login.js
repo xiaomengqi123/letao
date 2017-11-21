@@ -58,7 +58,6 @@ $(function(){
         //如果失败的话,就在底下给提示
         if(data.error==1000){
           //用户名不存在
-          // console.log("用户名不存在")
           $form.data("bootstrapValidator").updateStatus("username","INVALID","callback");
           //参数1:改变哪个字段
           //参数2:改成什么字段 VALID:通过 INVALID:不通过
@@ -67,7 +66,6 @@ $(function(){
         }
         if(data.error==1001){
         //  密码错误
-        //   console.log("密码错误!");
           $form.data("bootstrapValidator").updateStatus("password","INVALID","callback");
         }
       }
@@ -80,7 +78,4 @@ $(function(){
     // console.log(111);
     $form.data('bootstrapValidator').resetForm();
   });
- //完善错误提示功能
-  
 })
-//
