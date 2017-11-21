@@ -69,4 +69,5 @@ $(function(){
   };
   myChart.setOption(option);
   myChart1.setOption(option1);
+  
 });
