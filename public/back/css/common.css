@@ -77,6 +77,12 @@ html,body{
   line-height:40px;
   color:#ccc;
   padding-left: 40px;
+  border:3px solid transparent;
+  
+}
+.nav ul li a.now{
+  border-left:3px solid blue;
+  background-color:#000;
 }
 .nav .child a{
   padding-left:60px;
