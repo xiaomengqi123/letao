@@ -133,5 +133,28 @@ html,body{
 .lt-content .table{
   margin-top:20px;
 }
+/*second页面中的盒子*/
+.imgbox{
+  padding-top:20px;
+}
+/*设置上传图片的样式*/
+.filebox{
+  width: 82px;
+  height: 34px;
+  position:relative;
+}
 
+.filebox input{
+  position:absolute;
+  top:0;
+  left:0;
+  opacity:0;
+  width: 100%;
+  height: 100%;
+}
+.filebox:hover button{
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
 
