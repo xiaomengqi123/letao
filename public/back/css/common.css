@@ -121,7 +121,11 @@ html,body{
   height: 400px;
 }
 
-/*模态框*/
-.modal-body{
-  
+/* 页面中的表格*/
+.lt-content .table tr th,
+.lt-content .table tr td{
+  text-align:center;
+  vertical-align:middle;
 }
+
+

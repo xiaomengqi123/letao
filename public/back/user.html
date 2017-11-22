@@ -65,7 +65,34 @@
       </ol>
       
       <div class="lt-content">
-        
+        <table class="table table-bordered table-hover">
+          <thead>
+          <tr>
+            <th width=10%>序号</th>
+            <th width=30%>用户名</th>
+            <th width=30%>手机号</th>
+            <th width=20%>状态</th>
+            <th width=10%>操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <!--模板引擎-->
+          <!--<tr>-->
+            <!--<td>1</td>-->
+            <!--<td>xiaoqi</td>-->
+            <!--<td>11111111</td>-->
+            <!--<td>1</td>-->
+            <!--<td>-->
+              <!--<button class="btn btn-danger btn-sm">禁用</button>-->
+              <!--&lt;!&ndash;<button class="btn btn-success">启用</button>&ndash;&gt;-->
+            <!--</td>-->
+          <!--</tr>-->
+          </tbody>
+        </table>
+        <!--分页-->
+        <div class="text-right">
+          <ul id="paginator"></ul>
+        </div>
       </div>
     </div>
   </div>
@@ -92,12 +119,58 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<!--禁用启用的模态框-->
+<div class="modal fade" tabindex="-1" role="dialog" id="usermodal1">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">温馨提示</h4>
+      </div>
+      <div class="modal-body">
+        <p class="text-danger">
+          <i class="glyphicon glyphicon-info-sign text-den"></i>
+          您确定要执行此操作吗?
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary icon-comfirm">确定</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<!--表格内容的模板引擎-->
+<script type="text/html" id="userModal">
+  {{each rows v i}}
+  <tr>
+    <td>{{(page-1)*size+i+1}}</td>
+    <td>{{v.username}}</td>
+    <td>{{v.mobile}}</td>
+    <td>{{v.isDelete==1?"启用":"禁用"}}</td>
+    <td data-id="{{v.id}}">
+      {{if v.isDelete==1}}
+      <button class="btn btn-danger btn-sm btn-click">禁用</button>
+      {{/if}}
+      {{if v.isDelete==0}}
+      <button class="btn btn-success btn-sm btn-click">启用</button>
+      {{/if}}
+    </td>
+  </tr>
+  {{/each}}
+</script>
+
 
 <script src="lib/jquery/jquery.js"></script>
 <script src="lib/bootstrap/js/bootstrap.js"></script>
 <script src="./lib/echarts/echarts.min.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>
 <script src="js/common.js"></script>
-<script src="js/index.js"></script>
+<!--<script src="js/index.js"></script>-->
+<script src="js/user.js"></script>
 </body>
 </html>
