@@ -127,5 +127,11 @@ html,body{
   text-align:center;
   vertical-align:middle;
 }
+.lt-content{
+  margin-top:20px;
+}
+.lt-content .table{
+  margin-top:20px;
+}
 
 
