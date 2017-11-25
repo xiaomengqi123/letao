@@ -36,10 +36,11 @@ $(function(){
   $(".icon-mune").on("click",function(){
     $(".lt-main").toggleClass("now");
     $(".lt-aside").toggleClass("now");
+    $(this).toggleClass("now");
   });
   //右侧小图标退出功能
   $(".icon-logout").on("click",function(){
-    $('.modal').modal("show");
+    $('#outmodal').modal("show");
     
   //点击小叉退出
     $(".logout").off().on("click",function(){

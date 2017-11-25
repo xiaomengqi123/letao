@@ -107,6 +107,10 @@ $(function(){
        }
      }
    });
+//  隐藏域hot的值
+  $("[name='hot']").val("0");
+  
+  
 //  注册表单验证成功事件(注意要阻止提交的默认事件的发生)
   $form.on("success.form.bv",function(e){
     console.log(111);
@@ -129,7 +133,7 @@ $(function(){
         //重置下拉列表和图片
           $(".dropdown-text").text("请选择一级分类");
           $("[name='categoryId']").val('');
-          $(".img_box img").attr("src", "images/none.png");
+          $(".imgbox img").attr("src", "images/none.png");
           $("[name='brandLogo']").val('');
         }
 

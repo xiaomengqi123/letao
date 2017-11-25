@@ -1,0 +1,45 @@
+.category_l{
+  width: 90px;
+  height: 100%;
+  overflow:hidden;
+  position:relative;
+  float:left;
+}
+.category_l ul li a{
+  height: 50px;
+  line-height: 50px;
+  width: 90px;
+  display:block;
+  border-bottom:1px solid #ccc;
+  border-right:1px solid #ccc;
+  text-align:center;
+  color:#666;
+  background-color: #f3f4f5;
+  font-size:16px;
+}
+.category_l ul li.now a{
+  background-color: #fff;
+  border-right:0;
+}
+
+.category_r{
+  overflow:hidden;
+  height: 100%;
+  position:relative;
+}
+
+.category_r ul li a{
+  float:left;
+  display:block;
+  width: 33.33%;
+  text-align:center;
+}
+.category_r ul li a img{
+  width: 62px;
+  height: 62px;
+  display:block;
+  margin:0 auto;
+}
+.category_tips{
+  margin:30px;
+}

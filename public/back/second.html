@@ -106,7 +106,7 @@
 
 
 <!--退出的模态框-->
-<div class="modal fade" tabindex="-1" role="dialog">
+<div class="modal fade" tabindex="-1" role="dialog" id="outmodal">
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -159,6 +159,7 @@
               <button class="btn btn-default">上传图片</button>
               <input id="fileupload" type="file" name="pic1" data-url="/category/addSecondCategoryPic">
             </div>
+            <input type="hidden" name="hot">
             <div class="imgbox">
               <img src="./images/none.png" width="100" height="100" alt="">
               <input type="hidden" name="brandLogo">
@@ -186,7 +187,6 @@
 <script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
 <script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
 <script src="./lib/bootstrap/js/bootstrap.js"></script>
-<script src="./lib/echarts/echarts.min.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>
